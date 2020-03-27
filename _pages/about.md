@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-<img class="col one right" src="images/prof_pic.jpg">
+<img class="col one right" src="{{site.baseurl}}/images/prof_pic.jpg">
 I am Vasu Bhardwaj. I’m an experienced product developer. I am comfortable with working on the backend, the frontend and DevOps, depending on the task at hand, with some experience in managing small teams.
 <br/>
 I completed my B.Tech in Software Engineering from Delhi Technological University. I thrive on caffeine and love to explore the coffee shops everywhere I go. 
