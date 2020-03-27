@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="Deadpool Vs Spiderman" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A simple image classifier, built using Fastai Library. We will use a pre-trained" />
-<meta property="og:description" content="A simple image classifier, built using Fastai Library. We will use a pre-trained" />
+<meta name="description" content="A simple image classifier, built using Fastai Library. We will use a pre-trained Resnet34 Model, and train it further on images of deadpool and spiderman, to vastly reduce the amount of training required" />
+<meta property="og:description" content="A simple image classifier, built using Fastai Library. We will use a pre-trained Resnet34 Model, and train it further on images of deadpool and spiderman, to vastly reduce the amount of training required" />
 <link rel="canonical" href="https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html" />
 <meta property="og:url" content="https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html" />
 <meta property="og:site_name" content="Backprop Revelations" />
@@ -16,15 +16,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-03-12T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"A simple image classifier, built using Fastai Library. We will use a pre-trained","headline":"Deadpool Vs Spiderman","dateModified":"2020-03-12T00:00:00-05:00","datePublished":"2020-03-12T00:00:00-05:00","@type":"BlogPosting","image":"https://vasu014.github.io/backprop-revelations/images/deadpool.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html"},"url":"https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html","@context":"https://schema.org"}</script>
+{"description":"A simple image classifier, built using Fastai Library. We will use a pre-trained Resnet34 Model, and train it further on images of deadpool and spiderman, to vastly reduce the amount of training required","headline":"Deadpool Vs Spiderman","dateModified":"2020-03-12T00:00:00-05:00","datePublished":"2020-03-12T00:00:00-05:00","@type":"BlogPosting","image":"https://vasu014.github.io/backprop-revelations/images/deadpool.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html"},"url":"https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/backprop-revelations/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://vasu014.github.io/backprop-revelations/feed.xml" title="Backprop Revelations" /><link rel="shortcut icon" type="image/x-icon" href="/backprop-revelations/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Deadpool Vs Spiderman | Backprop Revelations</title>
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="Deadpool Vs Spiderman" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A simple image classifier, built using Fastai Library. We will use a pre-trained" />
-<meta property="og:description" content="A simple image classifier, built using Fastai Library. We will use a pre-trained" />
+<meta name="description" content="A simple image classifier, built using Fastai Library. We will use a pre-trained Resnet34 Model, and train it further on images of deadpool and spiderman, to vastly reduce the amount of training required" />
+<meta property="og:description" content="A simple image classifier, built using Fastai Library. We will use a pre-trained Resnet34 Model, and train it further on images of deadpool and spiderman, to vastly reduce the amount of training required" />
 <link rel="canonical" href="https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html" />
 <meta property="og:url" content="https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html" />
 <meta property="og:site_name" content="Backprop Revelations" />
@@ -32,7 +32,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-03-12T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"A simple image classifier, built using Fastai Library. We will use a pre-trained","headline":"Deadpool Vs Spiderman","dateModified":"2020-03-12T00:00:00-05:00","datePublished":"2020-03-12T00:00:00-05:00","@type":"BlogPosting","image":"https://vasu014.github.io/backprop-revelations/images/deadpool.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html"},"url":"https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html","@context":"https://schema.org"}</script>
+{"description":"A simple image classifier, built using Fastai Library. We will use a pre-trained Resnet34 Model, and train it further on images of deadpool and spiderman, to vastly reduce the amount of training required","headline":"Deadpool Vs Spiderman","dateModified":"2020-03-12T00:00:00-05:00","datePublished":"2020-03-12T00:00:00-05:00","@type":"BlogPosting","image":"https://vasu014.github.io/backprop-revelations/images/deadpool.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html"},"url":"https://vasu014.github.io/backprop-revelations/2020/03/12/deadpool-spiderman.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -103,7 +103,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Deadpool Vs Spiderman</h1><p class="page-description">A simple image classifier, built using Fastai Library. We will use a pre-trained</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-12T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Deadpool Vs Spiderman</h1><p class="page-description">A simple image classifier, built using Fastai Library. We will use a pre-trained Resnet34 Model, and train it further on images of deadpool and spiderman, to vastly reduce the amount of training required</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-12T00:00:00-05:00" itemprop="datePublished">
         Mar 12, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
